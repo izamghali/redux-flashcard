@@ -1,14 +1,16 @@
 import { v4 as uuidv4 } from 'uuid';
 import Button from './Button';
 
+type showModalFunction = () => void;
+
 export default function Card({ front, back } : { front: string, back: string }) {
 
-    function showCardModal(event): void {
+    function showCardModal(event: any): void {
         const modals = Array(document.querySelectorAll('.card-modal'))
-        const cardID = event.target.parentElement.id
-        const cardID2 = event.target.parentElement.parentElement.id
+        const cardID = event.target.parentElement?.id
+        const cardID2 = event.target.parentElement?.parentElement?.id
 
-        let cardModal
+        let cardModal: any
         modals.forEach(modal => {
             for (let node of modal) {
                 // console.log(node.parentElement?.id)
@@ -37,7 +39,10 @@ export default function Card({ front, back } : { front: string, back: string }) 
                 bg-base-100 shadow-xl 
                 overflow-hidden cursor-pointer
             `}>
-            <div onClick={showCardModal} className="flex justify-center items-center h-full hover:bg-emerald-200 duration-200 group">
+            <div 
+                onClick={showCardModal} 
+                className="flex justify-center items-center h-full hover:bg-emerald-200 duration-200 group"
+            >
                 <p className="group-hover:opacity-0">{front}</p>
                 <p className="group-hover:opacity-100 opacity-0 absolute group-hover:text-slate-800 select-none">{back}</p>
             </div>
