@@ -1,4 +1,5 @@
 import React from "react"
+import Button from "./Button"
 
 export default function QuizModal() {
     return (
@@ -26,9 +27,8 @@ export default function QuizModal() {
 
                 </div>
 
-
                 <div className="flex justify-end mt-4">
-                    <button className="btn btn-primary w-fit px-10">Create</button>
+                    <Button text="Create" className="px-10" />
                 </div>
             </div>
             <form method="dialog" className="modal-backdrop">

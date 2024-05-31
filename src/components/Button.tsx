@@ -9,7 +9,7 @@ interface IButton {
 
 export default function Button({ text, svg, className, OnClickFunc } : IButton) {
     return (
-        <button onClick={OnClickFunc} className={`btn ${className} `}>
+        <button onClick={OnClickFunc} className={`btn ${className} duration-200`}>
             { svg }
             { text }
         </button>

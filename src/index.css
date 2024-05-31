@@ -4,7 +4,7 @@
 
 @layer components {
   .add-button {
-      @apply font-medium border-slate-300 border-2 hover:bg-emerald-200 hover:border-emerald-200;
+      @apply font-medium bg-emerald-200 border-emerald-200 hover:bg-emerald-200 hover:border-emerald-200;
   }
 
   .padding-x {

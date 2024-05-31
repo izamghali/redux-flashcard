@@ -65,7 +65,7 @@ export default function Card({ front, back } : { front: string, back: string }) 
 
                     <div className='flex justify-end gap-2'>
                         <Button text='Remove' svg={removeIcon} className='' />
-                        <Button text='Save' svg={saveIcon} className='bg-emerald-200 text-slate-800' />
+                        <Button text='Save' svg={saveIcon} className=' text-slate-800 add-button' />
                     </div>
                     
                 </div>
