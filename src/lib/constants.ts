@@ -1,6 +1,4 @@
-export enum CardType {
-    
-}
+export type ICardType = 'gap' | 'antonym' | 'synonym' | 'definition' | 'translate' | 'picture';
 
 /*
     @ translate         : string | string
