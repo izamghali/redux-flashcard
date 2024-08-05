@@ -1,16 +1,15 @@
-import FlashCard from "@/components/custom/Card";
+import FlashCard from "@/components/custom/card/Card";
+import CardBlock from "@/components/custom/card/CardBlock";
 
 
 export default function Home() {
     return (
-        <main className="bg-gradient-to-b from-[#F8F8F8]">
-            <div className="border-2 border-red-400 max-md:p-4 flex justify-center">
-                <div className="max-w-[70rem] border-2 border-green-400 w-full">
-                    <h1 className="font-bold text-xl md:text-3xl">Topic</h1>
-                    <h2 className="font-medium text-lg md:text-xl">Sub topic</h2>
-                    <div>
-                        <FlashCard />
-                    </div>
+        <main className="">
+            <div className="max-md:p-4 flex justify-center py-8">
+                <div className="max-w-[70rem] w-full max-xl:px-4 max-md:px-0 duration-200">
+                    <h1 className="max-md:text-center font-bold text-xl md:text-2xl lg:text-3xl duration-200">Topic</h1>
+                    <h2 className="max-md:text-center font-medium lg:text-lg text-base duration-200 text-black/40 mb-6 md:mb-10">Sub topic</h2>
+                    <CardBlock />
                 </div>
             </div>
         </main>
