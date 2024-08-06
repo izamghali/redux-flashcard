@@ -62,8 +62,8 @@ export default function CardDialog({ crud, triggerBtn }: { crud: 'create' | 'edi
                 { crud == 'edit' && <CardSelector setSelectedCardType={setSelectedCardType} /> }
 
                 {/* example for each type */}
-
-                <CardInput cardType={selectedCardType} />
+                { crud == 'create' && <CardInput cardType={selectedCardType} /> }
+                { crud == 'edit' && <CardInput cardType={selectedCardType} /> }
                 
                 <AlertDialogFooter>
                     { crud == 'create' && <AlertDialogAction className="flex items-center gap-2" onClick={handleCreate}><PiPlus/>Create New Card</AlertDialogAction> }

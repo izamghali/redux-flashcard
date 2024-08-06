@@ -14,7 +14,7 @@ import {
                       { children }
                   </div>
                   </TooltipTrigger>
-                  <TooltipContent>
+                  <TooltipContent className="max-lg:hidden">
                       { content }
                   </TooltipContent>
               </Tooltip>
