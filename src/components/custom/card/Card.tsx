@@ -32,7 +32,7 @@ export default function FlashCard() {
                     <span>back</span>
                 </div>
             </div>
-            <div className="absolute bottom-2 right-2 flex items-center gap-2">
+            <div className="absolute bottom-2 right-2 flex items-center">
                 <CardDialog crud={'edit'} triggerBtn={<div><PiPencil /></div>}/>
                 <CardDialog crud={'delete'} triggerBtn={<div><PiTrash className=" fill-red-500" /></div>}/>
             </div>
