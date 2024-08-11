@@ -5,6 +5,7 @@ import { PiCards, PiPlus, PiX } from "react-icons/pi"
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "../ui/alert-dialog"
 import { CardSelector } from "./card/CardSelector"
 import CardDialog from "./card/CardDialog"
+import TopicList from "./TopicList"
 
 export default function Header() {
     return (
@@ -16,8 +17,11 @@ export default function Header() {
                         <div className="stripe"></div>
                     </SheetTrigger>
                     <SheetContent side={'left'}>
-                        <SheetTitle className="font-bold text-3xl max-md:text-2xl ">Flashcard</SheetTitle>
-                        <SheetDescription>select the topics below</SheetDescription>
+                        <div className="mb-64">
+                            <SheetTitle className="font-bold text-3xl max-md:text-2xl ">Flashcard</SheetTitle>
+                            <SheetDescription>select the topics below</SheetDescription>
+                        </div>
+                        <TopicList />
                     </SheetContent>
                 </Sheet>
                 <CardDialog 
