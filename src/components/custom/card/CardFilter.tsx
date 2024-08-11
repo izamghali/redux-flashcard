@@ -27,7 +27,7 @@ export function CardFilter() {
   return (
     <DropdownMenu>
         <DropdownMenuTrigger asChild>
-            <Button variant="outline" className="flex gap-2 items-center"><PiFunnel />Type</Button>
+            <Button variant="outline" className="flex gap-2 border-[1px] border-black/25 items-center"><PiFunnel />Type</Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-56">
             <DropdownMenuCheckboxItem className="cursor-pointer" checked={gappedSentence} onCheckedChange={setGappedSentence} >

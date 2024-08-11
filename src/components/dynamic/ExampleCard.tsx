@@ -1,11 +1,11 @@
 import Image from "next/image"
 import CardSide from "../custom/card/CardSide"
 
-export default function ExampleCard({ frontText, backText, imgUrl, altImage }: { frontText: string, backText: string, imgUrl?: string, altImage?: string }) {
+export default function ExampleCard({ frontText, backText, imgUrl, altImage, cardsClassNames }: { frontText: string, backText: string, imgUrl?: string, altImage?: string, cardsClassNames?: string }) {
 
     return (
         <div className="flex max-md:flex-col gap-4">
-            <div className="relative bg-white w-full shadow-sm p-6 rounded-md h-52 duration-200">
+            <div className={`relative bg-white w-full shadow-sm p-6 rounded-md duration-200 ${ cardsClassNames ? cardsClassNames : 'h-32 lg:h-40' }`}>
                 <div className="select-none w-full h-full flex items-center justify-center">
                     <CardSide side={"front"} className={"bg-black/80"} />
                     { imgUrl ? <div className="h-40 py-1">
@@ -13,7 +13,7 @@ export default function ExampleCard({ frontText, backText, imgUrl, altImage }: {
                     </div> : <span className="text-sm text-center">{ frontText }</span> }
                 </div>
             </div>
-            <div className="relative bg-white w-full shadow-sm p-6 rounded-md h-52 duration-200">
+            <div className={`relative bg-white w-full shadow-sm p-6 rounded-md duration-200 ${ cardsClassNames ? cardsClassNames : 'h-32 lg:h-40' }`}>
                 <div className="select-none w-full h-full flex justify-center items-center">
                     <CardSide side={"back"} className={"bg-green-400/80"} />
                     <span className="text-sm text-center">{ backText }</span>

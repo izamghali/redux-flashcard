@@ -16,7 +16,7 @@ export default function FlashCard() {
 
     return (
         <ToolTip className="flip-card group relative justify-self-center max-w-96 h-52 w-full" content={'click to flip the card'}>
-            <div onClick={flipCard} className="relative flip-card-inner duration-300 ease-in-out bg-transparent border-black cursor-pointer p-6 border-2 rounded-md h-full ">
+            <div onClick={flipCard} className="relative flip-card-inner duration-300 ease-in-out bg-transparent border-black cursor-pointer p-6 border-[1px] border-black/25 rounded-md h-full ">
                 <div className="top-0 left-0 select-none flip-card-front absolute w-full h-full flex items-center justify-center">
                     <div className="absolute top-2 left-2 flex items-center gap-1">
                         <div className="bg-black/80 w-[0.4rem] h-[0.4rem] rounded-full"></div>
