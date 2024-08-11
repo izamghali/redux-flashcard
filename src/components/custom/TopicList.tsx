@@ -35,14 +35,16 @@ export default function TopicList() {
     return (
         <div className="flex flex-col gap-2">
             {/* <Button onClick={() => { console.log(newTopicValue) }}>check input text</Button> */}
-            <div className="flex items-center justify-between">
+            <div className={`flex items-center justify-between`}>
                 <div className="flex gap-2 items-center border-b-2 pb-1 border-dotted w-fit z-10">
-                    <PiPlusCircle size={`1.2rem`} />
+                    <div>
+                        <PiPlusCircle size={`1.2rem`} />
+                    </div>
                     <Input
                         onChange={handleInputChange}
                         ref={newTopicRef}
                         className="border-0 focus-visible:ring-transparent"
-                        type="text" placeholder="Create new topic"
+                        type={'text'} placeholder="Create new topic"
                     />
                 </div>
                 <div className={`gap-1 ${ newTopicValue ? 'flex' : 'hidden' } `}>
